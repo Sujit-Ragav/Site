@@ -1,0 +1,89 @@
+/**
+ * Tailwind CSS imports
+ * View the full documentation at https://tailwindcss.com
+ */
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * WHAT IS THIS FILE?
+ *
+ * Globally applied styles. No matter which components are in the page or matching route,
+ * the styles in here will be applied to the Document, without any sort of CSS scoping.
+ *
+ */
+:root {
+  --qwik-dark-blue: #006ce9;
+  --qwik-light-blue: #18b6f6;
+  --qwik-light-purple: #ac7ff4;
+  --qwik-dark-purple: #713fc2;
+  --qwik-dirty-black: #1d2033;
+  --qwik-dark-background: #151934;
+  --qwik-dark-text: #ffffff;
+  --glow-color: hsl(186 100% 69%);
+}
+
+html {
+  line-height: 1;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  line-height: inherit;
+  background: linear-gradient(
+    -45deg,
+    #331d0a 0%,
+    #6c141a 25%,
+    #151515 50%,
+    #002c3d 75%,
+    #067506 100%
+  );
+  background-size: 400% 400%;
+  animation: gradient 30s ease-in infinite forwards;
+}
+
+@keyframes gradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  12.5%,
+  87.5% {
+    background-position: 100% 50%;
+  }
+  25%,
+  75% {
+    background-position: 50% 100%;
+  }
+  37.5%,
+  62.5% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 0% 100%;
+  }
+}
